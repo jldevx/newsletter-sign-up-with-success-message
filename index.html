@@ -11,42 +11,44 @@
 <body>
 
   <!-- Sign-up form start -->
-  <article class="container">
-    <div class="container__form">
+  <article class="hero">
+    <section class="container">
+      <div class="container__form">
       <h1 class="container__form-title">Stay updated!</h1>
       <p class="container__form-description">Join 60,000+ product managers receiving monthly updates on:</p>
-      <ul class="container__form-lists">
-        <li class="list-item"><img src="assets/images/icon-list.svg" alt="icon-list" class="container__form-icon"><span>Product discovery and building what matters</span></li>
-        <li class="list-item"><img src="assets/images/icon-list.svg" alt="icon-list" class="container__form-icon"><span>Measuring to ensure updates are a success</span></li>
-        <li class="list-item"><img src="assets/images/icon-list.svg" alt="icon-list" class="container__form-icon"><span>And much more!</span></li>
-      </ul>
+      <div class="container__form-lists">
+        <div class="list-item"><img src="assets/images/icon-list.svg" alt="icon-list" class="container__form-icon"><span>Product discovery and building what matters</span></div>
+        <div class="list-item"><img src="assets/images/icon-list.svg" alt="icon-list" class="container__form-icon"><span>Measuring to ensure updates are a success</span></div>
+        <div class="list-item"><img src="assets/images/icon-list.svg" alt="icon-list" class="container__form-icon"><span>And much more!</span></div>
+      </div>
       <form action="/submit" class="container__form-section">
-        <input id="email" type="text" class="container__form-section-input" placeholder="email@company.com">
         <label for="email" class="container__form-section-label">Email address</label>
+        <input id="email" type="text" class="container__form-section-input" placeholder="email@company.com">
         <button class="container__form-section-submit">Subscribe to monthly newsletter</button>
       </form>
-      
-      
-    </div>
-    <footer class="container__img-section">
-      <img src="assets\images\illustration-sign-up-desktop.svg" alt="illustration-sign-up-desktop" class="container__illustration">
-    </footer>
+      </div>
+      <div class="container__img-section">
+        <img src="assets\images\illustration-sign-up-desktop.svg" alt="illustration-sign-up-desktop" class="container__illustration">
+      </div>
+    </section>
   </article>
-  <!-- Sign-up form end -->
+      <!-- Sign-up form end -->
 
-  <!-- Success message start -->
-  <article class="container__success">
-    <img src="assets/images/icon-success.svg" alt="icon-success" class="container__success-icon">
-    <h2 class="container__success-text">Thanks for subscribing!</h2>
-    <p class="container__success-message">A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
-    <button class="container__success-dismiss-btn">Dismiss message</button>
-  </article>
+      <!-- Success message start -->
+      <article class="container__success">
+        <img src="assets/images/icon-success.svg" alt="icon-success" class="container__success-icon">
+        <h2 class="container__success-text">Thanks for subscribing!</h2>
+        <p class="container__success-message">A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
+        <button class="container__success-dismiss-btn">Dismiss message</button>
+      </article>
+    
+    
 
   <!-- Success message end -->
   
-  <div class="attribution">
+  <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </footer>
 </body>
 </html>
