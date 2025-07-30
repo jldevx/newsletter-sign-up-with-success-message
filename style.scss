@@ -1,0 +1,28 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+:root {
+    --color-blue-dark: hsl(234, 29%, 20%);
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-blue-dark);
+}
+.container {
+    display: flex;
+    background-color: aquamarine;
+    &__form {
+        
+    }
+}
+.container__success {
+    opacity: 0;
+    pointer-events: none;
+}
+.attribution { font-size: 11px; text-align: center; 
+    & a { color: hsl(228, 45%, 44%); }
+}
