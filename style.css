@@ -4,6 +4,11 @@
 
 :root {
   --color-blue-dark: hsl(234, 29%, 20%);
+  --color-grey: hsl(0, 0%,58%);
+}
+
+html {
+  font-size: clamp(0.6rem, 1.4vw, 0.8rem);
 }
 
 body {
@@ -18,21 +23,22 @@ body {
 
 .hero {
   background-color: rgb(255, 255, 255);
-  padding: 2rem;
+  padding: 1.5rem;
   width: min(90%, 50rem);
   border-radius: 20px;
 }
 
 .container {
   display: flex;
-  height: 30rem;
 }
 .container__form {
+  width: 80%;
+  height: auto;
   padding: 2rem;
   border: solid green;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 .container__form-section {
   display: flex;
@@ -41,6 +47,11 @@ body {
 .container__form-title {
   font-size: 3rem;
   margin: 0;
+  color: var(--color-blue-dark);
+}
+.container__form-icon {
+  height: 1.4rem;
+  width: auto;
 }
 .container__form-section-input {
   margin: 1rem 0;
@@ -48,12 +59,20 @@ body {
 .container__form-section-input, .container__form-section-submit {
   padding: 1rem;
   border-radius: 10px;
+  font-size: 1rem;
+}
+.container__form-section-submit {
+  background-color: var(--color-blue-dark);
+  color: #fff;
 }
 .container__img-section {
   border: solid blue;
+  width: 70%;
 }
 .container__illustration {
-  height: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
 }
 .container__form-lists {
   list-style: none;
@@ -61,13 +80,16 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  line-height: 1;
+  margin-bottom: 1rem;
   gap: 1rem;
 }
 
-.list-item {
+.list-item, .container__form-description {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .container__success {
@@ -80,4 +102,31 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-width: 50rem) {
+  .hero {
+    width: 100%;
+    padding: 0;
+    height: 100%;
+  }
+  .container {
+    flex-direction: column-reverse;
+    width: 100%;
+    height: 100%;
+  }
+  .container__img-section {
+    border: solid blue;
+    width: 100%;
+  }
+  .container__illustration {
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    display: block;
+  }
+  .container__form {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
