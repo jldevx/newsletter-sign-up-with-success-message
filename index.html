@@ -24,15 +24,15 @@
           <div class="list-item"><img src="assets/images/icon-list.svg" alt="icon-list" class="container__form-icon"><span>Measuring to ensure updates are a success</span></div>
           <div class="list-item"><img src="assets/images/icon-list.svg" alt="icon-list" class="container__form-icon"><span>And much more!</span></div>
         </div>
-        <form action="/submit" class="container__form-section">
+        <form id="myForm" action="#" class="container__form-section">
           <label for="email" class="container__form-section-label"><b>Email address</b></label>
-          <input id="email" type="text" class="container__form-section-input" placeholder="email@company.com">
-          <button class="container__form-section-submit">Subscribe to monthly newsletter</button>
+          <input pattern="[a-zA-Z0-9]+@[a-z.]" id="email" type="email" class="container__form-section-input" placeholder="email@company.com" novalidate>
+          <input type="submit" value="Subscribe to monthly newsletter" id="submitBtn" class="container__form-section-submit">
         </form>
       </div>
       <div class="container__img-section">
         <picture>
-          <source srcset="assets/images/illustration-sign-up-mobile.svg" type="image/webp" media="(max-width: 50rem)">
+          <source srcset="assets/images/illustration-sign-up-mobile.svg" type="image/webp" media="(max-width: 40rem)">
           <img src="assets\images\illustration-sign-up-desktop.svg" alt="illustration-sign-up-desktop" class="container__illustration">
         </picture>
       </div>
@@ -41,20 +41,17 @@
       <!-- Sign-up form end -->
 
       <!-- Success message start -->
-      <article class="container__success">
-        <img src="assets/images/icon-success.svg" alt="icon-success" class="container__success-icon">
-        <h2 class="container__success-text">Thanks for subscribing!</h2>
-        <p class="container__success-message">A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
-        <button class="container__success-dismiss-btn">Dismiss message</button>
-      </article>
+  <article class="container__success">
+    <img src="assets/images/icon-success.svg" alt="icon-success" class="container__success-icon">
+    <h2 class="container__success-text">Thanks for subscribing!</h2>
+    <p class="container__success-message">A confirmation email has been sent to ash@loremcompany.com. Please open it and click the buttoninsideto confirm your subscription.</p>
+    <button class="container__success-dismiss-btn">Dismiss message</button>
+  </article>
     
     
 
   <!-- Success message end -->
   
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
+  <script src="index.js"></script>
 </body>
 </html>

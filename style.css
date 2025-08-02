@@ -55,6 +55,11 @@ body {
 }
 .container__form-section-input {
   margin: 1rem 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.container__form-section-input:invalid {
+  border: 2px solid red;
+  background-color: hsl(0, 100%, 90%);
 }
 .container__form-section-input, .container__form-section-submit {
   padding: 1rem;
@@ -93,7 +98,14 @@ body {
 }
 
 .container__success {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 2rem;
+  background-color: #fff;
+}
+.container__success-icon {
+  height: 5rem;
 }
 
 .attribution {
@@ -104,12 +116,7 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-@media all and (max-width: 50rem) {
-  .hero {
-    width: 100%;
-    padding: 0;
-    height: 100%;
-  }
+@media all and (max-width: 40rem) {
   .container {
     flex-direction: column-reverse;
     width: 100%;
@@ -128,5 +135,27 @@ body {
   }
   .container__form {
     width: 100%;
+  }
+}
+@media all and (max-width: 30rem) {
+  html {
+    font-size: 0.8rem;
+  }
+  body {
+    margin: 0;
+  }
+  .hero {
+    width: min(100%, 50rem);
+    border-radius: 0;
+    padding: 0;
+  }
+  .container {
+    justify-content: flex-end;
+  }
+  .container__form {
+    height: -webkit-fill-available;
+    height: -moz-available;
+    height: fill;
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=style.css.map */

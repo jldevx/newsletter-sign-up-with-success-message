@@ -50,6 +50,11 @@ body {
     }
     &__form-section-input {
         margin: 1rem 0;
+        border: 1px solid rgba(0,0,0,0.2);
+        &:invalid {
+            border: 2px solid red;
+            background-color: hsl(0, 100%, 90%);
+        }
     }
     &__form-section-input, &__form-section-submit {
         padding: 1rem;
@@ -87,17 +92,21 @@ body {
     font-size: .9rem;
 }
 .container__success {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    padding: 2rem;
+
+    background-color: #fff;
+    &-icon {
+        height: 5rem;
+    }
 }
 .attribution { font-size: 11px; text-align: center; 
     & a { color: hsl(228, 45%, 44%); }
 }
-@media all and (max-width: 50rem){
-    .hero {
-        width: 100%;
-        padding: 0;
-        height: 100%;
-    }
+@media all and (max-width: 40rem){
+    
     .container {
         flex-direction: column-reverse;
         width: 100%;
@@ -114,6 +123,26 @@ body {
         }
         &__form {
             width: 100%;
+        }
+    }
+}
+@media all and (max-width: 30rem){
+    html {
+        font-size: .8rem;
+    }
+    body {
+        margin: 0;
+    }
+    .hero {
+        width: min(100%, 50rem);
+        border-radius: 0;
+        padding: 0;
+    }
+    .container {
+        justify-content: flex-end;
+        &__form {
+            height: fill;
+            justify-content: space-between;
         }
     }
 }
